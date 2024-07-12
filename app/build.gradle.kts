@@ -109,6 +109,20 @@ dependencies {
     //SPLASH SCREEN
     implementation(libs.androidx.core.splashscreen)
 
+    //CAMERA X
+    implementation(libs.camera.core)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.camera.video.implementation.androidx.camera)
+    implementation(libs.androidx.camera.video)
+    implementation(libs.androidx.camera.view)
+    implementation(libs.androidx.camera.mlkit.vision)
+    implementation(libs.androidx.camera.extensions)
+
+     //CAPTURA DE IMAGENS
+
+    implementation(libs.coil.compose)
+
 
 
 }
