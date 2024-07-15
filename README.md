@@ -12,9 +12,7 @@
    * [Room Database:](https://developer.android.com/training/data-storage/room?hl=pt-br)
      Considerei utilizar o Room Database para criar o banco de dados local  devido ele já ser a muito tempo homologado  pelo google
      oferecendo uma grande praticidade para criar as tabelas e utilização dos métodos padrão como salvar, atualizar e deletar.
-     
-   * [Retrofit:](https://square.github.io/retrofit/)
-     E o framework mais popular no android  para realizar comunicações com APIs, framework já homologado e em produção em varios projetos, escolhi ele pensando em futuros projetos em que poderei ter que lidar com ele.
+    
      
    * [Coroutines:](https://developer.android.com/kotlin/coroutines?hl=pt-br)
      Escolhi Coroutines devido e ele ser nativo no Kotlin, oferecer um nível baixo de complexidade ao ler o código, melhor integração e desempenho. 
@@ -31,8 +29,14 @@
 ## Features criadas
 
 - [x] Cadastro de usuário
-- [x] Localização Geográfica do usuário
+- [ ] Localização Geográfica do usuário
 - [x] registro de locais
-- [ ] Lista dos locais registrados
+- [X] Lista dos locais registrados
+
+| Login | Localizacao usuario | Lista | Realizacao registro |
+|----------|----------|----------|----------|
+|![Screenshot_20240715_165600](https://github.com/user-attachments/assets/966af895-12b5-43f0-9959-11b478d78e6a)|![Screenshot_20240715_170801](https://github.com/user-attachments/assets/48db9c05-6ec2-49ca-a00b-90decdbb4d35)| ![Screenshot_20240715_171259](https://github.com/user-attachments/assets/5a97eb4e-cd85-4425-823b-ed85bd29ea9d))|![Screenshot_20240715_171917](https://github.com/user-attachments/assets/9def659c-391e-4fd9-a8c2-1a8982f24147)
 
 
+## Observações do Projeto
+🚧  No momento estou realizando ajustes para busca da posição geográfica, no momento estou enfrentando problemas na permissão, mesmo eu tendo feito isso em outros projetos onde geralmente o problema era que no emulador que não tinha memória de alguma localização sendo necessário somente entrar no google maps para resolver o problema, dessa vez ele continua ocorrendo então estou na análise para entender o que pode estar acontecendo. 🚧
