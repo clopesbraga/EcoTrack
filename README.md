@@ -3,6 +3,13 @@
 - Projeto realizado para processo seletivo da empresa Thomas Greg.
 - Meu intuito nesse projeto é de mostrar os meus conhecimentos no desenvolvimento de software.
 
+## Arquitetura utilizada - M.V.V.M (Model-View-ViewModel)
+
+<!--ts-->
+   Considerei utilizar esta arquitetura primeiramente devido ser a arquitetura recomendada pelo Google [link](https://developer.android.com/topic/libraries/architecture/viewmodel?hl=pt-br)
+   eu a escolhi por acreditar  na facilidade que apresenta para dividir o código e principalmente na facilidade de usar essa arquitetura com Jetpack Compose.
+<!--ts-->
+
 ## Tecnologias utilizadas e minhas considerações
 <!--ts-->
    * [Firebase:](https://firebase.google.com/docs?hl=pt&authuser=0&_gl=1*16m4l23*_ga*MTgzMjQzNjk3MS4xNzEwNDIyNzA5*_ga_CW55HF8NVT*MTcxOTkzODgwOC4yMDYuMS4xNzE5OTM4ODE5LjQ5LjAuMA..)
