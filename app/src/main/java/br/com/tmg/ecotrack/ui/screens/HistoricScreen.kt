@@ -17,8 +17,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -27,13 +26,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 
 import androidx.compose.ui.unit.dp
-import br.com.tmg.ecotrack.model.database.ImageItemModel
 import br.com.tmg.ecotrack.viewmodel.ImagesViewModel
 import org.koin.androidx.compose.koinViewModel
 
 
 @Composable
-fun HistoricScreen() {
+fun HistoricScreen(showBottomBar: MutableState<Boolean>) {
+
+    showBottomBar.value = true
 
     val viewModel = koinViewModel<ImagesViewModel>()
     val context = LocalContext.current

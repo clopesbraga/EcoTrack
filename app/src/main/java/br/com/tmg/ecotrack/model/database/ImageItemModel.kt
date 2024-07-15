@@ -16,7 +16,7 @@ class ImageItemModel(
     val imageUri: String?=null,
 
     @ColumnInfo(name = "local")
-    val local: String?=null,
+    val local: String?="Local não encontrado",
 
     @ColumnInfo(name = "data")
     val data: String?=null,

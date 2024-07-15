@@ -19,15 +19,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import br.com.tmg.ecotrack.ui.screens.HistoricScreen
-import br.com.tmg.ecotrack.ui.screens.LoginScreen
 import br.com.tmg.ecotrack.ui.screens.MapScreen
 import br.com.tmg.ecotrack.utils.BarOptions
+import br.com.wsworks.listcarswswork.ui.screens.LoginScreen
 
 val bottonOptionsBar = listOf(
     BarOptions(name = "Locais", icons = Icons.Filled.LocationOn),
@@ -38,24 +39,27 @@ val bottonOptionsBar = listOf(
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        installSplashScreen()
         enableEdgeToEdge()
         setContent {
             val navController = rememberNavController()
+            val showBottomBar = remember { mutableStateOf(true)}
+
             Scaffold(
                 bottomBar = {
-                    MenuBottomBar(navController)
+                    if (showBottomBar.value) {MenuBottomBar(navController)}
                 })
             { innerpading ->
 
                 NavHost(
                     modifier = Modifier.fillMaxSize(),
                     navController = navController,
-                    startDestination = "loc"
+                    startDestination = "login"
                 )
                 {
-                    composable(route = "login") { LoginScreen(navController) }
-                    composable(route = "loc") { MapScreen() }
-                    composable(route = "hist") { HistoricScreen() }
+                    composable(route = "login") { LoginScreen(navController, showBottomBar) }
+                    composable(route = "map") { MapScreen(showBottomBar) }
+                    composable(route = "hist") { HistoricScreen(showBottomBar) }
                 }
             }
         }
