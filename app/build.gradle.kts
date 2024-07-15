@@ -2,7 +2,9 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.secrets.gradle.plugin)
+    id("com.google.gms.google-services")
     id ("kotlin-kapt")
+
 
 }
 
@@ -63,8 +65,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.firebase.common.ktx)
-    implementation(libs.firebase.auth.ktx)
+    implementation(libs.androidx.tv.material)
+
 //    implementation(libs.androidx.ui.desktop)
 
 
@@ -102,6 +104,8 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.common.ktx)
+    implementation(libs.firebase.auth.ktx)
 
 
     // Koin for Android
@@ -134,7 +138,8 @@ dependencies {
     kapt("androidx.room:room-compiler:$roomVersion")
 
 
-
+    //SPLASH SCREEN
+    implementation(libs.androidx.core.splashscreen)
 
 
 }
