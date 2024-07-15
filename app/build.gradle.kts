@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.secrets.gradle.plugin)
+    id ("kotlin-kapt")
 
 }
 
@@ -64,6 +65,7 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.firebase.common.ktx)
     implementation(libs.firebase.auth.ktx)
+//    implementation(libs.androidx.ui.desktop)
 
 
     //TESTES UNITARIOS
@@ -122,6 +124,16 @@ dependencies {
      //CAPTURA DE IMAGENS
 
     implementation(libs.coil.compose)
+
+
+    //ROOM DATABASE
+
+    val roomVersion = "2.6.1"
+    implementation (libs.androidx.room.runtime)
+    implementation(libs.androidx.monitor)
+    kapt("androidx.room:room-compiler:$roomVersion")
+
+
 
 
 
