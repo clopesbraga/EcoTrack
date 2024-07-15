@@ -33,6 +33,10 @@
      e acredito que esse vai ser o framework padrão quando o  assunto for desenvolvimento  de novas features em um projeto para Android. 
 <!--te-->
 
+## Como testar o app
+
+Para utilizar a versão mais recente pode acessar o este [link](https://github.com/clopesbraga/EcoTrack/releases/tag/Release1.0)  ou realizar o clone do proejto.
+
 ## Features criadas
 
 - [x] Cadastro de usuário
