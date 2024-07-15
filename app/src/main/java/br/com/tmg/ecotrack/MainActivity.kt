@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity() {
                 {
                     composable(route = "login") { LoginScreen(navController, showBottomBar) }
                     composable(route = "map") { MapScreen(showBottomBar) }
-                    composable(route = "hist") { HistoricScreen(showBottomBar) }
+                    composable(route = "hist") { HistoricScreen(navController,showBottomBar) }
                 }
             }
         }
