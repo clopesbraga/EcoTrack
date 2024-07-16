@@ -104,9 +104,8 @@ fun MapScreen(showBottomBar: MutableState<Boolean>) {
 
 
 @Composable
-private fun TakePicture(viewModel: ImagesViewModel) {
-
-
+ fun TakePicture(viewModel: ImagesViewModel) {
+     
     val context = LocalContext.current
     val file = context.createImageFile()
     val uri = FileProvider.getUriForFile(
