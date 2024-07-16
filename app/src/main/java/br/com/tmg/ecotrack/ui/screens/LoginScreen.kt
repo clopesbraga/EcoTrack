@@ -3,6 +3,7 @@ package br.com.wsworks.listcarswswork.ui.screens
 import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -37,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.tv.material3.OutlinedButtonDefaults
 import br.com.tmg.ecotrack.R
+import br.com.tmg.ecotrack.ui.screens.TakePicture
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -71,8 +73,8 @@ fun LoginScreen(navController: NavHostController, showBottomBar: MutableState<Bo
                     .padding(16.dp)
                     .size(200.dp)
                     .clip(CircleShape)
-            )
 
+            )
         }
         Box {
             OutlinedTextField(
@@ -119,14 +121,12 @@ private fun SaveLoginButton(
         ),
         onClick = {
 
-
             auth.createUserWithEmailAndPassword(username, password)
                 .addOnCompleteListener { logintTask ->
                     if (logintTask.isSuccessful) {
                         navController.navigate("map")
                     } else {
-                        navController.navigate("map")
-                        Log.d("CREATE_ERROR", "USER NOT SAVED -> ${logintTask.exception}")
+                        Log.d("LOGIN ERROR", "USER NOT ACCESS -> ${logintTask.exception}")
                     }
                 }
 

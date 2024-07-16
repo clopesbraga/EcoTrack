@@ -83,10 +83,10 @@ fun MenuBottomBar(navController: NavHostController) {
                     onClick = {
                         selectedItem = item
                         val route = when (text) {
-                            "Locais" -> "loc"
+                            "Locais" -> "map"
                             "Historico" -> "hist"
                             else -> {
-                                "loc"
+                                "map"
                             }
                         }
                         navController.navigate(route, navOptions = navOptions {
