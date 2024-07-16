@@ -48,7 +48,7 @@
 
 ## Como baixar o apk.
 
-Para utilizar a versão mais recente pode acessar o este [link](https://github.com/clopesbraga/EcoTrack/releases/tag/Release1.0)  ou realizar o clone do proejto.
+Para utilizar a versão mais recente pode acessar o este [link](https://github.com/clopesbraga/EcoTrack/releases)  ou realizar o clone do proejto.
 
 ## Instalando o app no celular
 
